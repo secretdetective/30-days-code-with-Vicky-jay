@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <img src="logo.jpg" alt="certify_logo">
+    <h1>Generate certificate faster and easier with Certify</h1>
+    <hr>
+    <small class="fill" id="head"></small><br><br><br><br>
+    <form id="registration-form" action="https://formspree.io/f/xleqkzrr" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="Name" required><br>
+
+      <label for="department">Course Studied: </label>
+      <input type="text" name="Department" required>
+      <br>
+      <label for="text">Name of Institution: </label>
+      <input type="text" name="Name of Institution" required>
+      <br>
+      <label for="RegNo">Registration Number: </label>
+      <input type="text" name="Reg Number" required>
+      <br>
+      <label for="cgpa">CGPA: </label>
+      <input type="number" name="CGPA" required min="2" max="5" step="0.01">
+      <br>
+      <p class="par">
+        Remember to read <br>our<br>
+        <span class="sign">Terms & Conditions</span>
+      </p>
+      <input type="submit" value="Register" class="btn">
+      <div class="spinner" id="spinner"></div>
+    </form>
+  </div>
+
+  <marquee>Please ensure the information provided is accurate. False information will be disregarded.</marquee>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
